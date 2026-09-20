@@ -1,0 +1,39 @@
+#display-screen {
+    background-color: pink;
+    grid-column: span 3;
+    padding: 10px;
+    margin: 5px;
+    font-size: 20px;
+
+}
+
+#calculator {
+    margin: 0 auto;
+    width: 50%;
+    background-color: rgb(101, 184, 233);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px;
+}
+
+#calculator .key {
+    background-color: orange;
+    color: white;
+    margin: 5px;
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 20px;
+}
+
+#calculator .key:hover {
+    cursor: pointer;
+    background-color: rgb(250, 176, 39);
+}
+
+#calculator .key:active {
+    background-color: rgb(248, 193, 89);
+}
+
+h1 {
+    text-align: center;
+}
