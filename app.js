@@ -1,4 +1,7 @@
-const keys = document.querySelectorAll(".key");
+const numberKeys = document.querySelectorAll(".number-key");
+const operatorKeys = document.querySelectorAll(".operator-key")
+const clearKey = document.getElementById("clear-key");
+const backKey = document.getElementById("back-key");
 var header = document.querySelector("h1");
 var oneKey = document.getElementById("1-key");
 var displayScreen = document.getElementById("display-screen");
@@ -15,12 +18,44 @@ function test() {
     console.log(keys);
 }
 
-keys.forEach(key => {
+function clearScreen(){
+    displayScreen.innerText = "";
+}
+
+function backSpace(){
+    var displayTest = displayScreen.innerText.slice(0, -1);
+    console.log(displayTest);
+    displayScreen.innerText = displayTest;
+    
+
+    
+
+}
+
+clearKey.addEventListener("click", clearScreen);
+
+backKey.addEventListener("click", backSpace);
+
+numberKeys.forEach(key => {
     key.addEventListener("click", handleClick);
     key.addEventListener("click", function(){
         console.log(this.innerText);
+        displayScreen.innerText = displayScreen.innerText + this.innerText;
     })
 })
+
+operatorKeys.forEach(key => {
+    key.addEventListener("click", handleClick);
+    key.addEventListener("click", function(){
+        console.log(this.innerText);
+        displayScreen.innerText = displayScreen.innerText + this.innerText;
+    })
+})
+
+
+
+
+
 
 
 
