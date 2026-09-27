@@ -2,6 +2,8 @@ const numberKeys = document.querySelectorAll(".number-key");
 const operatorKeys = document.querySelectorAll(".operator-key")
 const clearKey = document.getElementById("clear-key");
 const backKey = document.getElementById("back-key");
+const equalsKey = document.getElementById("equals-key");
+
 var header = document.querySelector("h1");
 var oneKey = document.getElementById("1-key");
 var displayScreen = document.getElementById("display-screen");
@@ -26,15 +28,19 @@ function backSpace(){
     var displayTest = displayScreen.innerText.slice(0, -1);
     console.log(displayTest);
     displayScreen.innerText = displayTest;
-    
+}
 
-    
-
+function evaluate() {
+   const numStr = displayScreen.innerText;
+   var evaluation = eval(numStr);
+   displayScreen.innerText = evaluation;
 }
 
 clearKey.addEventListener("click", clearScreen);
 
 backKey.addEventListener("click", backSpace);
+
+equalsKey.addEventListener("click", evaluate);
 
 numberKeys.forEach(key => {
     key.addEventListener("click", handleClick);
@@ -59,24 +65,17 @@ operatorKeys.forEach(key => {
 
 
 
-function addition(var1, var2) {
-    return var1 + var2;
+function addition(a,b){
+    return a + b;
 }
 
-function subtraction(var1, var2) {
-    return var1 - var2;
-}
+console.log(addition(5,6));
 
-var kii1 = 3;
-var kii2 = 5;
+//const numStr = "77+8" ;
 
-console.log(addition(kii1, kii2));
-console.log(subtraction(kii1, kii2));
 
-oneKey.onclick=function(){
-    var animal = "goose"
-    displayScreen.appendChild(animal);
-}
 
-const numbersString = 12222
+
+//console.log(eval(numStr));
+
 
