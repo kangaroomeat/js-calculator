@@ -78,4 +78,8 @@ console.log(addition(5,6));
 
 //console.log(eval(numStr));
 
+let regex = /hello/i;
+
+console.log(regex.test("hello world"));
+
 
