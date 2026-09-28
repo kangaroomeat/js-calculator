@@ -80,6 +80,14 @@ console.log(addition(5,6));
 
 let regex = /hello/i;
 
+let regexTwo = /[+]/;
+
 console.log(regex.test("hello world"));
+
+console.log(/dog/i.test("dogs are cool"));
+
+console.log(regexTwo.test("dogs + cats"));
+
+console.log(/[*]/.test("dogs * lizards"));
 
 
