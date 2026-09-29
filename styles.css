@@ -5,12 +5,14 @@
     margin: 5px;
     font-size: 20px;
     border-radius: 10px;
+    /*height: 45.84px;*/
 
 }
 
 #calculator {
     margin: 0 auto;
-    width: 50%;
+    width: 280px;
+    height: 403px;
     background-color: rgb(101, 184, 233);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

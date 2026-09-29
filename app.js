@@ -90,4 +90,24 @@ console.log(regexTwo.test("dogs + cats"));
 
 console.log(/[*]/.test("dogs * lizards"));
 
+console.log(/[/]/.test("7/8"));
+
+/*if previous input is an operator key or decimal key, do not allow user input
+another decimal key or operator key*/
+
+function checkForReoccurringOperator(){
+  var lastChar =  displayScreen.innerText.slice(-1);
+  //console.log(lastChar);
+
+  if(lastChar === "2") {
+    console.log("this is 2");
+  } else {
+    console.log(lastChar);
+  }
+}
+
+const testButton = document.getElementById("test")
+
+testButton.addEventListener("click", checkForReoccurringOperator);
+
 
