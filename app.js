@@ -100,7 +100,7 @@ function checkForReoccurringOperator(){
   //console.log(lastChar);
 
   if(lastChar === "2") {
-    console.log("this is 2");
+    console.log("do nothing");
   } else {
     console.log(lastChar);
   }
