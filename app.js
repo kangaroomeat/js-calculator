@@ -96,17 +96,18 @@ console.log(/[/]/.test("7/8"));
 another decimal key or operator key*/
 
 function checkForReoccurringOperator(){
-  var lastChar =  displayScreen.innerText.slice(-1);
-  //console.log(lastChar);
-
-  if(lastChar === "2") {
-    console.log("do nothing");
+  var lastChar = displayScreen.innerText.slice(-1);
+  
+  if(lastChar == 2 || 3 || 6) {
+    console.log("yea");
   } else {
-    console.log(lastChar);
+    console.log("no");
   }
+
+  
 }
 
-const testButton = document.getElementById("test")
+const testButton = document.getElementById("test");
 
 testButton.addEventListener("click", checkForReoccurringOperator);
 
