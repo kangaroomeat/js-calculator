@@ -1,5 +1,5 @@
 #display-screen {
-    background-color: pink;
+    background-color: rgb(197, 194, 194);
     grid-column: span 3;
     padding: 10px;
     margin: 5px;
@@ -13,10 +13,11 @@
     margin: 0 auto;
     width: 280px;
     height: 403px;
-    background-color: rgb(101, 184, 233);
+    background-color: rgb(40, 41, 41);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 10px;
+    border-radius: 10px;
 }
 
 #calculator .key {
