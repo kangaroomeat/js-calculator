@@ -46,15 +46,31 @@ numberKeys.forEach(key => {
     key.addEventListener("click", handleClick);
     key.addEventListener("click", function(){
         console.log(this.innerText);
-        displayScreen.innerText = displayScreen.innerText + this.innerText;
-    })
+        displayScreen.innerText = displayScreen.innerText + this.innerText;}
+    )
 })
 
 operatorKeys.forEach(key => {
     key.addEventListener("click", handleClick);
     key.addEventListener("click", function(){
-        console.log(this.innerText);
-        displayScreen.innerText = displayScreen.innerText + this.innerText;
+
+        var lastChar = displayScreen.innerText.slice(-1);
+
+        if(lastChar == "+") {
+            
+        } else if(lastChar == "-"){
+            
+        } else if(lastChar == "-") {
+
+        } else if(lastChar == "/") {
+
+        } else {
+            console.log(this.innerText);
+            displayScreen.innerText = displayScreen.innerText + this.innerText;
+        }
+
+        /*console.log(this.innerText);
+        displayScreen.innerText = displayScreen.innerText + this.innerText;*/
     })
 })
 
@@ -98,10 +114,16 @@ another decimal key or operator key*/
 function checkForReoccurringOperator(){
   var lastChar = displayScreen.innerText.slice(-1);
   
-  if(lastChar == 2 || 3 || 6) {
-    console.log("yea");
+  if(lastChar == "+") {
+    console.log("operator symbol");
+  } else if(lastChar == "-") {
+    console.log("operator symbol");
+  } else if(lastChar == "/") {
+    console.log("operator symbol");
+  } else if(lastChar == "*") {
+    console.log("operator symbol");
   } else {
-    console.log("no");
+    console.log(lastChar);
   }
 
   
